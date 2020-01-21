@@ -13,7 +13,7 @@ import javax.servlet.http.Part;
 
 import helpers.MiHelper;
 
-@MultipartConfig(location = "/Users/marta/Desktop/cositas", maxFileSize = 10485760L)
+@MultipartConfig(location = "C:\\Users\\USUARIO\\Desktop", maxFileSize = 10485760L)
 @WebServlet("/ejercicio09")
 public class ejercicio09 extends HttpServlet {
 	private static final long serialVersionUID = 1L;

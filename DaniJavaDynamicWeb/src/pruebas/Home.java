@@ -19,6 +19,7 @@ public class Home extends HttpServlet {
 		out.println("<a href='prueba1'>PRUEBA 1</a><br/>");
 		out.println("<a href='miSegundoServlet'>miSegundoServlet</a><br/>");
 		out.println("<a href='formularioConCheckbox'>formularioConCheckbox</a><br/>");
+		out.println("<a href='ejercicio09'>ejercicio09</a><br/>");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
