@@ -3,7 +3,7 @@ package t7;
 import java.util.List;
 import java.util.Map;
 
-public class ej07 {
+public class ej07A {
 	
 	public static String generaRadio(String nombre, Map<String,String> datos, String seleccionado) {
 		String html = "";

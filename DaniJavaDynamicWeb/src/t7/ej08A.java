@@ -12,14 +12,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import static t7.ej07.*;
+import static t7.ej07A.*;
 
 @SuppressWarnings("serial")
 @WebServlet("/t7/ej08")
-public class ej08 extends HttpServlet {
+public class ej08A extends HttpServlet {
 	private Map<String,String> paises;
 
-	public ej08() {
+	public ej08A() {
 		super();
 		paises = new HashMap<>();
 		paises.put("ES", "España");

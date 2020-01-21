@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class T7E05Main
  */
-@WebServlet("/t7/ej05/*")
-public class ej05 extends HttpServlet {
+@WebServlet("/t7/ej05/")
+public class ej05A extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class Main
  */
 @WebServlet("/t7/ej04")
-public class ej04 extends HttpServlet {
+public class ej04A extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
    
