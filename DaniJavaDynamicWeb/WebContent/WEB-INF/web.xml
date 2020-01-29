@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>DaniJavaDynamicWeb</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+  	<servlet-name>ServletPrueba</servlet-name>
+  	<servlet-class>pruebas.ServPrueba</servlet-class>
+  	<init-param>
+  		<param-name>usuario</param-name>
+  		<param-value>desp</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>password</param-name>
+  		<param-value>despliegue</param-value>
+  	</init-param>
+  </servlet>
+  <servlet>
+  	<servlet-name>ServletControl</servlet-name>
+  	<servlet-class>pruebas.ServletControl</servlet-class>
+  	<init-param>
+  		<param-name>param</param-name>
+  		<param-value>valorParam</param-value>
+  	</init-param>
+  	</servlet>
+  	
+  	<context-param>
+  		<param-name>deContexto</param-name>
+  		<param-value>valordeContexto</param-value>
+  	</context-param>
+  
+  <servlet-mapping>
+  	<servlet-name>ServletPrueba</servlet-name>
+  	<url-pattern>/ServPrueba</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ServletControl</servlet-name>
+  	<url-pattern>/ServletControl</url-pattern>
+  </servlet-mapping>
+</web-app>

@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/")
+@WebServlet("/home")
 public class Home extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -20,6 +20,8 @@ public class Home extends HttpServlet {
 		out.println("<a href='miSegundoServlet'>miSegundoServlet</a><br/>");
 		out.println("<a href='formularioConCheckbox'>formularioConCheckbox</a><br/>");
 		out.println("<a href='ejercicio09'>ejercicio09</a><br/>");
+		out.println("<a href='ServletControl'>ServletControl</a><br/>");
+		out.println("<a href='ServPrueba'>ServPrueba</a><br/>");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

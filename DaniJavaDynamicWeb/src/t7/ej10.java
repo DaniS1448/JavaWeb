@@ -7,6 +7,7 @@ import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -34,6 +35,27 @@ public class ej10 extends HttpServlet {
 		Map<String, String> users = new HashMap<>();
 		users.put("dani", "stuparu");
 		users.put("marta", "santana");
+		
+		if(nombre != "" && users.containsKey(nombre) && users.get(nombre).equals(pwd) ) {
+			boolean comprobador = true;
+			for(Cookie cadaCookie : request.getCookies()) {
+				if(cadaCookie.getName() == "ultimaConexion") {
+					Long diferencia = System.currentTimeMillis() - Long.parseLong(cadaCookie.getValue());
+					out.println("Han pasado " +diferencia+ " segundos");
+					comprobador=false;
+				}
+			}
+			
+			if(comprobador) {
+				out.println("Ha pasado más de 60 segundos desde la última sesión");
+			}
+			Cookie miCookie = new Cookie("ultimaConexion",
+			Long.toString(System.currentTimeMillis()) ); miCookie.setMaxAge(60);
+			response.addCookie(miCookie);
+			
+		} else {
+			out.println("<h1>No se ha podido iniciar sesión</h1>");
+		}
 	}
 
 }
