@@ -20,6 +20,17 @@
 		String prmtrContext = (String)(sc.getInitParameter("deContexto"));
 		
 		out.println(prmtrContext);
+		
+		out.println("<br>");
+		
+		String prmtrGlobal= (String)(sc.getInitParameter("parGlobal"));
+		
+		out.println(prmtrGlobal);
+		
+		out.println("<br>");
+		
+		Integer contador = (Integer)sc.getAttribute("cont");
+		out.println("<p>=== "+contador.intValue() +" peticiones *.html===</p>");
 	%>
 	
 	</p>

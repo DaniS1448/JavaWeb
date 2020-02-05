@@ -11,7 +11,7 @@
   </welcome-file-list>
   <servlet>
   	<servlet-name>ServletPrueba</servlet-name>
-  	<servlet-class>pruebas.ServPrueba</servlet-class>
+  	<servlet-class>despliegue.ServPrueba</servlet-class>
   	<init-param>
   		<param-name>usuario</param-name>
   		<param-value>desp</param-value>
@@ -23,7 +23,7 @@
   </servlet>
   <servlet>
   	<servlet-name>ServletControl</servlet-name>
-  	<servlet-class>pruebas.ServletControl</servlet-class>
+  	<servlet-class>despliegue.ServletControl</servlet-class>
   	<init-param>
   		<param-name>param</param-name>
   		<param-value>valorParam</param-value>
@@ -43,4 +43,22 @@
   	<servlet-name>ServletControl</servlet-name>
   	<url-pattern>/ServletControl</url-pattern>
   </servlet-mapping>
+  
+  <filter>
+  	<filter-name>fContador</filter-name>
+  	<filter-class>fContador</filter-class>
+  	<init-param>
+  		<param-name>cont</param-name>
+  		<param-value>null</param-value>
+  	</init-param>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>fContador</filter-name>
+  	<url-pattern>*.html</url-pattern>
+  </filter-mapping>
+  
+  <session-config>
+  	<session-timeout>15</session-timeout>
+  </session-config>
 </web-app>
